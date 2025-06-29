@@ -1,62 +1,70 @@
-# Karabiner Elements - Hyper Mode Configuration ⚡
+# My Karabiner Shortcuts 
 
-A powerful keyboard configuration that transforms Caps Lock into a "Hyper Mode" key for enhanced productivity and vim-style navigation.
+## 🏛️ System Pillars
 
-## 🚀 Core Feature
+These are the two main modes that unlock everything else.
 
-**Caps Lock → Hyper Mode/Escape**
-- **Tap**: Escape key
-- **Hold**: Activates Hyper Mode for custom shortcuts
-- **Ultra-low latency**: 150ms threshold for responsive feel
+- **`Caps Lock` (Hyper Key / Escape):**
+  - **Short Press (tap):** `Escape`. Universally useful.
+  - **Hold:** Activates **Hyper Mode**. This is the trigger for 90% of the shortcuts below.
 
-## 🔥 Git Mode
+- **`g` (Git Mode):**
+  - **Short Press (tap):** Types the letter `g` normally.
+  - **Hold:** Activates **Git Mode** for actions related to GitHub/Git.
 
-**Hold 'g' → Git Mode**
-- **Hold g + i** → My GitHub Issues (Raycast)
-- **Hold g + p** → My GitHub Pull Requests (Raycast)
-- **Hold g + r** → My GitHub Repositories (Raycast)
-- **Hold g + c** → Create New Repository (Web)
+---
 
-## Quick Reference
+## 🚀 Hyper Mode (Hold `Caps Lock`)
 
-### Navigation (Vim-style)
-- `Hyper + h/j/k/l` → Arrow keys (left/down/up/right)
-- `Hyper + w` → Word forward (Option + Right)
-- `Hyper + b` → Word backward (Option + Left)
+### ⌨️ Global Navigation (Vim-style)
 
-### App Launchers
-- `Hyper + n` → Notes
-- `Hyper + t` → Ghostty (Terminal)
-- `Hyper + e` → Microsoft Edge
-- `Hyper + v` → Visual Studio Code
-- `Hyper + s` → Beeper Desktop
-- `Hyper + m` → Spark Desktop (Mail)
+These shortcuts work everywhere to avoid using the arrow keys.
 
-### Workflow Shortcuts
-- `Hyper + u` → Screenshot area to clipboard (Cmd+Ctrl+Shift+4)
-- `Hyper + y` → Search YouTube via Raycast
+- `h` : Left Arrow
+- `j` : Down Arrow
+- `k` : Up Arrow
+- `l` : Right Arrow
+- `w` : Next Word (`Option + Right`)
+- `b` : Previous Word (`Option + Left`)
 
-### App-Specific Shortcuts
+### ⚡ Global Workflows
 
-**Notes App**
-- `Hyper + n` → New note (Cmd+N)
+Complex actions available system-wide.
 
-**Microsoft Edge**
-- `Hyper + d` → Developer Tools (Cmd+Option+I)
-- `Hyper + Cmd + k` → Previous tab (Ctrl+Shift+Tab)
-- `Hyper + Cmd + j` → Next tab (Ctrl+Tab)
+- `u` : **Screenshot area to clipboard.** Triggers macOS's native selection tool (`Cmd+Ctrl+Shift+4`).
+- `y` : **Launch YouTube search.** Opens Raycast directly in the YouTube search extension.
 
-## Installation
+### 📱 Global App Launchers
 
-1. Install [Karabiner Elements](https://karabiner-elements.pqrs.org/)
-2. Import this configuration file
-3. Enable the "main" profile
-4. Start using Caps Lock as your new productivity key
+Quickly launch your most-used applications.
 
-## Configuration Structure
+- `n` : Launch **Notes**
+- `t` : Launch **Ghostty** (Terminal)
+- `e` : Launch **Microsoft Edge**
+- `v` : Launch **Visual Studio Code**
+- `s` : Launch **Beeper**
+- `m` : Launch **Spark** (Mail)
 
-The configuration includes optimized rules with settings for ISO keyboard layout and low-latency response times.
+### 🎯 Context-Aware Actions (App-Specific)
 
-### Timing Thresholds
-- **Hyper Mode**: 150ms for activation/deactivation
-- **Git Mode**: 200ms for activation by holding 'g'
+These shortcuts only work when the specified application is frontmost.
+
+#### In **Microsoft Edge**:
+- `d` : Toggle **Developer Tools**.
+- `l` : **Copy the URL** of the current tab to the clipboard.
+- `⌘ + k` : Go to the **Previous Tab**.
+- `⌘ + j` : Go to the **Next Tab**.
+
+#### In **Notes**:
+- `n` : Create a **new note** (instead of launching the app).
+
+---
+
+## 🐙 Git Mode (Hold `g`)
+
+Hold `g` and then press one of the following keys for Git/GitHub actions via Raycast.
+
+- `i` : View **My Issues** on GitHub.
+- `p` : View **My Pull Requests** on GitHub.
+- `r` : Search **My Repositories** on GitHub.
+- `c` : Open the webpage to **Create a New Repository** on GitHub.

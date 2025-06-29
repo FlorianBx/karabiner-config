@@ -150,7 +150,7 @@
             ]
           },
           {
-            "description": "App Specific: Microsoft Edge (DevTools, Tabs)",
+            "description": "App Specific: Microsoft Edge (DevTools, Tabs, URL)",
             "manipulators": [
               {
                 "type": "basic",
@@ -171,7 +171,8 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": ["com.microsoft.edgemac"]
                   }
-                ]
+                ],
+                "description": "Hyper + d -> Toggle DevTools"
               },
               {
                 "type": "basic",
@@ -195,7 +196,8 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": ["com.microsoft.edgemac"]
                   }
-                ]
+                ],
+                "description": "Hyper+Cmd + k -> Previous Tab"
               },
               {
                 "type": "basic",
@@ -214,7 +216,28 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": ["com.microsoft.edgemac"]
                   }
-                ]
+                ],
+                "description": "Hyper+Cmd + j -> Next Tab"
+              },
+              {
+                "type": "basic",
+                "from": { "key_code": "l" },
+                "to": [
+                  { "key_code": "l", "modifiers": ["left_command"] },
+                  { "key_code": "c", "modifiers": ["left_command"] }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_mode_is_active",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["com.microsoft.edgemac"]
+                  }
+                ],
+                "description": "Hyper + l -> Copy current URL"
               }
             ]
           },
