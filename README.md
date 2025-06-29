@@ -7,7 +7,15 @@ A powerful keyboard configuration that transforms Caps Lock into a "Hyper Mode" 
 **Caps Lock → Hyper Mode/Escape**
 - **Tap**: Escape key
 - **Hold**: Activates Hyper Mode for custom shortcuts
-- **Ultra-low latency**: 100ms threshold for responsive feel
+- **Ultra-low latency**: 150ms threshold for responsive feel
+
+## 🔥 Git Mode
+
+**Hold 'g' → Git Mode**
+- **Hold g + i** → My GitHub Issues (Raycast)
+- **Hold g + p** → My GitHub Pull Requests (Raycast)
+- **Hold g + r** → My GitHub Repositories (Raycast)
+- **Hold g + c** → Create New Repository (Web)
 
 ## Quick Reference
 
@@ -25,8 +33,8 @@ A powerful keyboard configuration that transforms Caps Lock into a "Hyper Mode" 
 - `Hyper + m` → Spark Desktop (Mail)
 
 ### Workflow Shortcuts
-- `Hyper + g` → Open GitHub new repository
-- `Hyper + u` → Screenshot (Cmd+Ctrl+Shift+4) + add to clipboard
+- `Hyper + u` → Screenshot area to clipboard (Cmd+Ctrl+Shift+4)
+- `Hyper + y` → Search YouTube via Raycast
 
 ### App-Specific Shortcuts
 
@@ -47,4 +55,8 @@ A powerful keyboard configuration that transforms Caps Lock into a "Hyper Mode" 
 
 ## Configuration Structure
 
-The configuration includes two identical profiles with optimized settings for ISO keyboard layout and low-latency response times.
+The configuration includes optimized rules with settings for ISO keyboard layout and low-latency response times.
+
+### Timing Thresholds
+- **Hyper Mode**: 150ms for activation/deactivation
+- **Git Mode**: 200ms for activation by holding 'g'
