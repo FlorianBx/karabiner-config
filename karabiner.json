@@ -242,6 +242,33 @@
             ]
           },
           {
+            "description": "App Specific: Enter Tmux Copy Mode (Hyper + i)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": { "key_code": "i" },
+                "to": [
+                  { "key_code": "a", "modifiers": ["left_control"] },
+                  { "key_code": "open_bracket" }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_mode_is_active",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.mitchellh.ghostty",
+                      "^com\\.googlecode\\.iterm2$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Hyper Mode: Global Workflows",
             "manipulators": [
               {
