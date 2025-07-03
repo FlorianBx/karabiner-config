@@ -39,96 +39,6 @@
             ]
           },
           {
-            "description": "Core: Git Mode on 'g' key (hold to activate)",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "g",
-                  "modifiers": { "optional": ["any"] }
-                },
-                "to_if_alone": [{ "key_code": "g" }],
-                "to_if_held_down": [
-                  {
-                    "set_variable": { "name": "git_mode_is_active", "value": 1 }
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": { "name": "git_mode_is_active", "value": 0 }
-                  }
-                ],
-                "parameters": {
-                  "basic.to_if_held_down_threshold_milliseconds": 200
-                }
-              },
-              {
-                "type": "basic",
-                "from": { "key_code": "i" },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "git_mode_is_active",
-                    "value": 1
-                  }
-                ],
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/raycast/github/my-issues'"
-                  }
-                ],
-                "description": "g -> My Issues"
-              },
-              {
-                "type": "basic",
-                "from": { "key_code": "p" },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "git_mode_is_active",
-                    "value": 1
-                  }
-                ],
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/raycast/github/my-pull-requests'"
-                  }
-                ],
-                "description": "g -> My Pull Requests"
-              },
-              {
-                "type": "basic",
-                "from": { "key_code": "r" },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "git_mode_is_active",
-                    "value": 1
-                  }
-                ],
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/raycast/github/search-repositories?arguments=%7B%22owner%22%3A%22florianburel%22%7D'"
-                  }
-                ],
-                "description": "g -> My Repositories"
-              },
-              {
-                "type": "basic",
-                "from": { "key_code": "c" },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "git_mode_is_active",
-                    "value": 1
-                  }
-                ],
-                "to": [{ "shell_command": "open 'https://github.com/new'" }],
-                "description": "g -> Create New Repo (Web)"
-              }
-            ]
-          },
-          {
             "description": "App Specific: Notes (New Note)",
             "manipulators": [
               {
@@ -260,8 +170,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "com.mitchellh.ghostty",
-                      "^com\\.googlecode\\.iterm2$"
+                      "com.mitchellh.ghostty"
                     ]
                   }
                 ]
